@@ -12,20 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
-# Presubmit test that ensures that source files contain valid license headers
-# https://github.com/googleapis/repo-automation-bots/tree/main/packages/header-checker-lint
-# Install: https://github.com/apps/license-header-lint-gcf
-
-allowedCopyrightHolders:
-  - "Google LLC"
-allowedLicenses:
-  - "Apache-2.0"
-sourceFileExtensions:
-  - "yaml"
-  - "yml"
-  - "sh"
-  - "proto"
-  - "Dockerfile"
-  - "py"
-  - "text"
+handleGHRelease: true
+packageName: genai-toolbox-langchain-python
+releaseType: simple
+versionFile: "cmd/version.txt"

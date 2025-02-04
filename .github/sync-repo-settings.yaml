@@ -1,4 +1,4 @@
-# Copyright 2024 Google LLC
+# Copyright 2025 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,7 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-
 # Synchronize repository settings from a centralized config
 # https://github.com/googleapis/repo-automation-bots/tree/main/packages/sync-repo-settings
 # Install: https://github.com/apps/sync-repo-settings
@@ -23,14 +22,18 @@ squashMergeAllowed: true
 mergeCommitAllowed: false
 # Enable branch protection
 branchProtectionRules:
-- pattern: main
-  isAdminEnforced: true
-  requiredStatusCheckContexts:
-    - 'cla/google'
-  # - Add required status checks like presubmit tests
-  requiredApprovingReviewCount: 1
-  requiresCodeOwnerReviews: true
-  requiresStrictStatusChecks: true
+  - pattern: main
+    isAdminEnforced: true
+    requiredStatusCheckContexts:
+      - "cla/google"
+      - "lint"
+      - "conventionalcommits.org"
+      - "header-check"
+    # - Add required status checks like presubmit tests
+      - "langchain-python-sdk-pr-py313 (toolbox-testing-438616)"
+    requiredApprovingReviewCount: 1
+    requiresCodeOwnerReviews: true
+    requiresStrictStatusChecks: true
 
 # Set team access
 permissionRules:

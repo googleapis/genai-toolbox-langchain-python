@@ -12,20 +12,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+name: lint
+on:
+  pull_request:
+    paths: # These paths are the inverse of lint.yml
+      - "./**/*.md"
 
-# Presubmit test that ensures that source files contain valid license headers
-# https://github.com/googleapis/repo-automation-bots/tree/main/packages/header-checker-lint
-# Install: https://github.com/apps/license-header-lint-gcf
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: none
 
-allowedCopyrightHolders:
-  - "Google LLC"
-allowedLicenses:
-  - "Apache-2.0"
-sourceFileExtensions:
-  - "yaml"
-  - "yml"
-  - "sh"
-  - "proto"
-  - "Dockerfile"
-  - "py"
-  - "text"
+    steps:
+      - run: echo "No tests required."
