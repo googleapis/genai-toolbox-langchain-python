@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1](https://github.com/googleapis/genai-toolbox-langchain-python/compare/v0.1.0...v0.1.1) (2025-02-18)
+
+
+### Bug Fixes
+
+* Add items to parameter schema ([#62](https://github.com/googleapis/genai-toolbox-langchain-python/issues/62)) ([d77eb7c](https://github.com/googleapis/genai-toolbox-langchain-python/commit/d77eb7c4ccf604ea8449a784d6ba4d8b4ad1ac96))
+* **langchain-sdk:** Fix issue occurring when using a tool with list type. ([#33](https://github.com/googleapis/genai-toolbox-langchain-python/issues/33)) ([9c4f0d1](https://github.com/googleapis/genai-toolbox-langchain-python/commit/9c4f0d102e9d399437e67152e906a76d9d632757))
+
 ## 0.1.0 (2025-02-05)
 
 
@@ -24,4 +32,3 @@
 ### Bug Fixes
 
 * Deprecate 'add_auth_headers' in favor of 'add_auth_tokens' ([c5c699c](https://github.com/googleapis/genai-toolbox-langchain-python/commit/c5c699cc29bcc0708a31bff90e8cec489982fe2a))
-
